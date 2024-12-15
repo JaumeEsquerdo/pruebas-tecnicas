@@ -1,6 +1,6 @@
 // 1 generar constantes y variables
 
-const tabs = document.querySelectorAll(".Tabs button");
+const tabs = document.querySelectorAll(".Tabs-a");
 const tabContents = document.querySelectorAll(".Tab-content");
 
 

@@ -34,9 +34,15 @@
 
 .Product-details{
     width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    
 }
 .Product-author{
     font-weight: 200;
+    margin-bottom: -40px;
 }
 
 
@@ -57,7 +63,32 @@
 
 }
 
-.Tabs buttoon.isActive{
-    color: aquamarine;
+.Tabs-a.isActive{
+    color: rgb(0, 0, 0);
     font-weight: 600;
+    border-top: 1px solid black;
+    width: 50%;
+    display: inline;
+}
+
+/* Footer */
+
+.Footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    background-color: #fdfdfc;
+    width: 100%;
+    margin-top: 50px;
+    
+    
+}
+.Tabs-a{
+    text-decoration: none;
+    padding: 70px;
+    color: rgb(117, 113, 113);
+    
+
+    
 }
