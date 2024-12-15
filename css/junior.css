@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -9,12 +10,54 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: #f9f9f9;
 }
 .Header{
     display: flex;
     justify-content: space-around;
     width: 100%;
-   
+}
+.Main{
+    height: 80vh;
+    
+    max-width: 100%;
+}
+
+.Product-btn{
+    width: 7rem;
+    height: 2rem;
+    background-color: black;
+    color: #f9f9f9;
+    border: none;
+}
+
+.Product-details{
+    width: 50rem;
+}
+.Product-author{
+    font-weight: 200;
+}
+
+
+
+/* para que funcione los botones de los muebles
+*/
+
+.Tab-content{
+    display: none;
+    
+}
+
+.Tab-content.isActive{
+    margin: 4rem;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Tabs buttoon.isActive{
+    color: aquamarine;
+    font-weight: 600;
 }
