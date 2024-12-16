@@ -10,18 +10,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     background-color: #f9f9f9;
 }
-.Header{
+.Header{margin: 0 auto;
     display: flex;
     justify-content: space-around;
     width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
 }
 .Main{
     height: 80vh;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 100%;
+    width: 100%;
 }
 
 .Product-btn{
@@ -51,16 +56,25 @@
 */
 
 .Tab-content{
-    display: none;
-    
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease, visibility 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .Tab-content.isActive{
-    margin: 4rem;
+    margin: 4rem auto;
     max-width: 100%;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
     display: flex;
-    justify-content: space-between;
-
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateY(20%);
 }
 
 .Tabs-a.isActive{
