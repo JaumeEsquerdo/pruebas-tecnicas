@@ -28,7 +28,7 @@
     padding: 1rem;
 }
 .Main{
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,4 +112,29 @@
     
 
     
+}
+
+/* Menú sobrepuesto */
+
+.Menu-cubierto{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.Menu-cubierto.isOpen{
+    opacity: 1;
+    visibility: visible;
 }
