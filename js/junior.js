@@ -1,12 +1,24 @@
 // 1 generar constantes y variables
+///////////////////////////////////
 
 const tabs = document.querySelectorAll(".Tabs-a");
 const tabContents = document.querySelectorAll(".Tab-content");
 
+//aqui van las variables del menu
+const openMenu = document.getElementById('openMenu');
+const closeMenu = document.getElementById('closeMenu');
+const menuCubierto = document.getElementById('menuCubierto');
+
+// variables submenu  de collection
+ const menuItems = document.querySelectorAll('.Menu-item');
+ const subMenu = document.querySelector('.Menu-subMenu');
+ const link = document.querySelector('.Menu-nav');
+ const collection = document.getElementById('collection');
 
 
 
 // 2 funciones
+//////////////////////////////////////
 
 function changeTab(targetTab){
     //quita primero todas las clases isActive tanto en los botones como en el content
@@ -21,6 +33,7 @@ function changeTab(targetTab){
 
 
 // 3 ejecutar
+///////////////////////////////////////
 
 tabs.forEach((tab)=>{
     tab.addEventListener("click", (event) => {
@@ -28,3 +41,19 @@ tabs.forEach((tab)=>{
         changeTab(targetTab);
     });
 });
+
+openMenu.addEventListener('click', ()=>{
+    menuCubierto.classList.add('isOpen');
+});
+
+closeMenu.addEventListener('click', ()=>{
+    menuCubierto.classList.remove('isOpen');
+})
+
+
+//ejecutar submenu Collection
+
+collection.addEventListener('click', () =>{
+    subMenu.classList.toggle('isVisible');
+})
+

@@ -119,7 +119,7 @@
 .Menu-cubierto{
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100%;
     width: 100%;
     height: 100%;
     background-color: #000;
@@ -127,14 +127,95 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    align-items: flex-start;
+    padding: 20px 40px;
+    z-index: 10;
+    /* opacity: 0;
+    visibility: hidden; */
+    transition:left 0.8s ease-in-out;
 }
 
 .Menu-cubierto.isOpen{
-    opacity: 1;
-    visibility: visible;
+    left: 0;
+}
+
+.Menu-btn{
+    font-size: 2rem;
+}
+
+.Menu{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.Menu-navs{
+   
+    list-style: none;
+}
+
+.Menu-nav{
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+    
+}
+
+.Menu-cubiertoHeader{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.Menu-cubiertoH1{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.Close-btn{
+    font-size: 1.8rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2 ease;
+}
+
+.Close-btn:hover{
+    transform: scale(1.1);
+}
+
+.Menu-footer{
+    display: inline-block;
+    margin-right: 20px;
+    color: #605e5e;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+}
+
+.Menu-footer-list{
+    gap: 30px;
+}
+
+.Menu-footer-links{
+    color: #696767;
+    text-decoration: none;
+    padding: 30px;
+    
+}
+
+.Menu-subMenu{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.Menu-subMenu.isVisible{
+    max-height: 200px;
 }

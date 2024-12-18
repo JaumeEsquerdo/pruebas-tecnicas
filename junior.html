@@ -14,7 +14,7 @@
 <body class="Body">
     <header class="Header">
         <h1>mater</h1>
-        <nav><button>Nav</button></nav>
+        <nav><button class="Menu-btn" id="openMenu">X</button></nav>
     </header>
 
     <main class="Main">
@@ -65,21 +65,47 @@
     <!-- menu nav a pantalla completa -->
 
     <div class="Menu-cubierto" id="menuCubierto">
-        <button class="Close-btn" id="closeMenu">X</button>
+        <header class="Menu-cubiertoHeader">
+            <h1 class="Menu-cubiertoH1">mater</h1>
+            <button class="Close-btn" id="closeMenu">X</button>
+        </header>
+
         <nav class="Menu">
-            <ul>
-                <li><a href="#">Collection</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Craftmanship</a></li>
-                <li><a href="#">Ethics</a></li>
+            <ul class="Menu-navs">
+                <li>
+                    <a class="Menu-nav" id="collection" href="#">Collection</a>
+                    <ul class="Menu-subMenu">
+                        <li class="Menu-subItem" id="furniture">Furniture</li>
+                        <li class="Menu-subItem">Lighting</li>
+                        <li class="Menu-subItem">Accessories</li>
+                    </ul>
+                </li>
+                <li><a class="Menu-nav" href="#">Design</a></li>
+                <li><a class="Menu-nav" href="#">Craftmanship</a></li>
+                <li><a class="Menu-nav" href="#">Ethics</a></li>
             </ul>
         </nav>
-        <div class="Menu-footer">
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Dealers</a>
-            <a href="#">Press</a>
+
+        <div class="Menu-image">
+            <img src="" alt="Sillón">
         </div>
+
+        <div class="Menu-footer">
+            <ul class="Menu-footer-list">
+                <a class="Menu-footer-links" href="#">About</a>
+                <a class="Menu-footer-links" href="#">Contact</a>
+                <a class="Menu-footer-links" href="#">Dealers</a>
+                
+            </ul>
+            <ul class="Menu-footer-list">
+                <a class="Menu-footer-links" href="#">News</a>
+                <a class="Menu-footer-links" href="#">Care</a>
+                <a class="Menu-footer-links" href="#">Press</a>
+                
+            </ul>
+
+        </div>
+
 
     </div>
 
