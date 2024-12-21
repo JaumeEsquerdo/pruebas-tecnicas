@@ -1,42 +1,48 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.Body{
+.Body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #f9f9f9;
+    overflow: hidden;
 }
 
-.Header .Main .Footer{
+.Header,
+.Main,
+.Footer {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
+
 
 }
-.Header{margin: 0 auto;
+
+.Header {
+
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
-}
-.Main{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    width: 100%;
+
 }
 
-.Product-btn{
+.Main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.Product-btn {
     width: 7rem;
     height: 2rem;
     background-color: black;
@@ -44,15 +50,16 @@
     border: none;
 }
 
-.Product-details{
+.Product-details {
     width: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 40px;
-    
+
 }
-.Product-author{
+
+.Product-author {
     font-weight: 200;
     margin-bottom: -40px;
 }
@@ -62,7 +69,10 @@
 /* para que funcione los botones de los muebles
 */
 
-.Tab-content{
+.Tab-content {
+    width: 100%;
+    max-width: 1200px;
+
     visibility: hidden;
     opacity: 0;
     transform: translateY(100%);
@@ -72,19 +82,14 @@
     left: 0;
 }
 
-.Tab-content.isActive{
-    margin: 4rem auto;
-    max-width: 100%;
-    width: 100%;
+.Tab-content.isActive {
+
     opacity: 1;
     visibility: visible;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    transform: translateY(20%);
+    transform: translateY(0%);
 }
 
-.Tabs-a.isActive{
+.Tabs-a.isActive {
     color: rgb(0, 0, 0);
     font-weight: 600;
     border-top: 1px solid black;
@@ -94,30 +99,32 @@
 
 /* Footer */
 
-.Footer{
+.Footer {
+    
     display: flex;
     justify-content: center;
     align-items: center;
     height: 15vh;
     background-color: #fdfdfc;
     width: 100%;
-    margin-top: 50px;
     
-    
+
+
 }
-.Tabs-a{
+
+.Tabs-a {
     text-decoration: none;
     padding: 70px;
     color: rgb(117, 113, 113);
-    
 
-    
+
+
 }
 
 /* Menú sobrepuesto */
 
-.Menu-cubierto{
-    position: fixed;
+.Menu-cubierto {
+    position: absolute;
     top: 0;
     left: 100%;
     width: 100%;
@@ -132,18 +139,18 @@
     z-index: 10;
     /* opacity: 0;
     visibility: hidden; */
-    transition:left 0.8s ease-in-out;
+    transition: left 0.8s ease-in-out;
 }
 
-.Menu-cubierto.isOpen{
+.Menu-cubierto.isOpen {
     left: 0;
 }
 
-.Menu-btn{
+.Menu-btn {
     font-size: 2rem;
 }
 
-.Menu{
+.Menu {
     width: 100%;
     height: 80vh;
     display: flex;
@@ -151,33 +158,34 @@
 
 }
 
-.Menu-navs{
-   
+.Menu-navs {
+
     list-style: none;
 }
 
-.Menu-nav{
+.Menu-nav {
     font-size: 2.5rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 20px;
     display: block;
-    
+
 }
 
-.Menu-cubiertoHeader{
+.Menu-cubiertoHeader {
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
 }
-.Menu-cubiertoH1{
+
+.Menu-cubiertoH1 {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.Close-btn{
+.Close-btn {
     font-size: 1.8rem;
     color: white;
     background: none;
@@ -186,11 +194,11 @@
     transition: transform 0.2 ease;
 }
 
-.Close-btn:hover{
+.Close-btn:hover {
     transform: scale(1.1);
 }
 
-.Menu-footer{
+.Menu-footer {
     display: inline-block;
     margin-right: 20px;
     color: #605e5e;
@@ -199,23 +207,23 @@
 
 }
 
-.Menu-footer-list{
+.Menu-footer-list {
     gap: 30px;
 }
 
-.Menu-footer-links{
+.Menu-footer-links {
     color: #696767;
     text-decoration: none;
     padding: 30px;
-    
+
 }
 
-.Menu-subMenu{
+.Menu-subMenu {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
 }
 
-.Menu-subMenu.isVisible{
+.Menu-subMenu.isVisible {
     max-height: 200px;
 }
