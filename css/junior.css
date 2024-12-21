@@ -220,12 +220,14 @@
     width: 100%;
 }
 
+
+
 .Menu-footer-links {
     color: #696767;
     text-decoration: none;
     padding: 1rem;
     margin: 0;
-
+    width: 70px;
 }
 
 .Menu-subMenu {
@@ -261,6 +263,3 @@
     color: white;
 }
 
-.Menu-footer-links{
-    width: 70px;
-}
