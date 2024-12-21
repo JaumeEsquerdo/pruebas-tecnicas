@@ -10,50 +10,74 @@ const closeMenu = document.getElementById('closeMenu');
 const menuCubierto = document.getElementById('menuCubierto');
 
 // variables submenu  de collection
- const menuItems = document.querySelectorAll('.Menu-item');
- const subMenu = document.querySelector('.Menu-subMenu');
- const link = document.querySelector('.Menu-nav');
- const collection = document.getElementById('collection');
+const menuItems = document.querySelectorAll('.Menu-item');
+const subMenu = document.querySelector('.Menu-subMenu');
+const link = document.querySelector('.Menu-nav');
+const collection = document.getElementById('collection');
+
+// variable para la imagen del submenu
+// variable para el active del boton furniture
+
+const furniture = document.getElementById('furniture');
+const menuFurniture = document.getElementById('menuFurniture');
+
+
+
+
 
 
 
 // 2 funciones
 //////////////////////////////////////
 
-function changeTab(targetTab){
+function changeTab(targetTab) {
     //quita primero todas las clases isActive tanto en los botones como en el content
-    tabs.forEach((tab) => {tab.classList.remove("isActive")});
-    tabContents.forEach((content)=> content.classList.remove("isActive"));
+    tabs.forEach((tab) => { tab.classList.remove("isActive") });
+    tabContents.forEach((content) => content.classList.remove("isActive"));
 
     //aqui le añadimos la clase isActive a los targetTab particular
     document.querySelector(`[data-tab=${targetTab}]`).classList.add("isActive");
     document.querySelector(`[data-content=${targetTab}]`).classList.add("isActive");
 }
 
+//fucion ara mostrar la imagen de submenu
+function showMenuFurniture(){
+    menuFurniture.classList.toggle('isVisible');
+}
 
+function btnActive(){
+    furniture.classList.toggle('isActive');
+}
 
 // 3 ejecutar
 ///////////////////////////////////////
 
-tabs.forEach((tab)=>{
+tabs.forEach((tab) => {
     tab.addEventListener("click", (event) => {
         const targetTab = event.currentTarget.getAttribute("data-tab");
         changeTab(targetTab);
     });
 });
 
-openMenu.addEventListener('click', ()=>{
+openMenu.addEventListener('click', () => {
     menuCubierto.classList.add('isOpen');
 });
 
-closeMenu.addEventListener('click', ()=>{
+closeMenu.addEventListener('click', () => {
     menuCubierto.classList.remove('isOpen');
 })
 
 
 //ejecutar submenu Collection
 
-collection.addEventListener('click', () =>{
+collection.addEventListener('click', () => {
     subMenu.classList.toggle('isVisible');
+})
+
+// ejecutar submenu furniture
+
+furniture.addEventListener('click', () => {
+    showMenuFurniture();
+    btnActive();
 })
 

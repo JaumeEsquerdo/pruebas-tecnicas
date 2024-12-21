@@ -27,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-
+    margin-top: 50px;
 }
 
 .Main {
@@ -79,8 +79,7 @@
     top: 0;
     left: 0;
 
-    display: flex
-;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -99,7 +98,7 @@
     border-top: 1px solid black;
     width: 50%;
     display: inline;
-    
+
 }
 
 /* Footer */
@@ -111,8 +110,8 @@
     align-items: center;
     height: 15vh;
     background-color: #fdfdfc;
-    
-    
+
+
 
 
 }
@@ -153,6 +152,8 @@
 
 .Menu-btn {
     font-size: 2rem;
+    background-color: white;
+    cursor: pointer;
 }
 
 .Menu {
@@ -173,7 +174,7 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     display: block;
 
 }
@@ -213,13 +214,17 @@
 }
 
 .Menu-footer-list {
-    gap: 30px;
+    gap: 20px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .Menu-footer-links {
     color: #696767;
     text-decoration: none;
-    padding: 30px;
+    padding: 1rem;
+    margin: 0;
 
 }
 
@@ -231,4 +236,31 @@
 
 .Menu-subMenu.isVisible {
     max-height: 200px;
+}
+
+.Menu-furniture {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Menu-furniture.isVisible {
+    display: block;
+}
+
+.Menu-subItem {
+    color: #696767;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.Menu-subItem.isActive {
+    color: white;
+}
+
+.Menu-footer-links{
+    width: 70px;
 }
